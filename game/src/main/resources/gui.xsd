@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/gui" xmlns:tns="http://www.example.org/gui" elementFormDefault="qualified">
+
+    <xs:element name="GuiData" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="gameActionProps" minOccurs="0" maxOccurs="unbounded" type="tns:gameActionProp"/>
+			</xs:sequence>
+		</xs:complexType>    	
+    </xs:element>
+    
+    <xs:complexType name="gameActionProp">
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="actionClass" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="accelerator" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="image" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="text" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

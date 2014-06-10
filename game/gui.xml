@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:GuiData xmlns:tns="http://www.example.org/gui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/gui src/main/resources/gui.xsd ">
+
+	<tns:gameActionProps>
+		<tns:name>newLocalGame</tns:name>
+		<tns:actionClass>NewLocalGameAction</tns:actionClass>
+		<tns:accelerator>A</tns:accelerator>
+		<tns:image>foo</tns:image>
+		<tns:text>new local game</tns:text>
+	</tns:gameActionProps>
+	
+	<tns:gameActionProps>
+		<tns:name>newNetworkGame</tns:name>
+		<tns:actionClass>NewNetworkGameAction</tns:actionClass>
+		<tns:accelerator>A</tns:accelerator>
+		<tns:image></tns:image>
+		<tns:text>new network game</tns:text>
+	</tns:gameActionProps>
+	
+</tns:GuiData>
