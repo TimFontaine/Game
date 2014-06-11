@@ -21,7 +21,6 @@ import gameserver.client.core.SpecLoader;
 import gameserver.client.graphics.GUI;
 import gameserver.client.services.ConnectionController;
 import gameserver.design.ServerConfig;
-import gameserver.design.ServerRootCalls;
 import gameserver.loader.Specification;
 import gameserver.server.Server;
 

@@ -4,21 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 
 import gameserver.Client;
 import gameserver.ServerMode;
 import gameserver.cdi.CDIHelper;
-import gameserver.client.ClientCommandHandler;
 import gameserver.client.Game;
 import gameserver.data.Connection;
-import gameserver.design.CommandExecutor;
 import gameserver.design.ServerConfig;
-import gameserver.design.ServerRootCalls;
-import gameserver.server.communication.LocalConnection;
-import gameserver.server.executors.CommandExecutorImpl;
 import gameserver.server.executors.GameController;
 import gameserver.server.executors.ModusEnum;
 import gameserver.server.executors.UserConnectionController;
@@ -27,7 +21,6 @@ import gameserver.server.executors.UserConnectionController;
 public class Server implements Runnable {
 	
 	ServerMode serverMode;
-	CommandExecutor commandExecutor;
 	
 	private List<Connection> clients;
 	
@@ -72,6 +65,7 @@ public class Server implements Runnable {
 		System.out.println("starting server at:" + System.currentTimeMillis());
 		network.waitForNewPlayer();
 		System.out.println("a player has connected at:" + System.currentTimeMillis());
+		System.out.println(Thread.currentThread().getName());
 	}
 	
 	public void setServerConfig(int maxUsers, ServerConfig config) {

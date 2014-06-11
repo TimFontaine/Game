@@ -12,7 +12,6 @@ import javax.enterprise.event.Observes;
 
 import gameserver.cdi.CDIHelper;
 import gameserver.design.ServerConfig;
-import gameserver.design.ServerRootCalls;
 import gameserver.server.communication.NetworkConnection;
 
 @ApplicationScoped

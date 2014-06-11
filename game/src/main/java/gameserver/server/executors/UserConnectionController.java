@@ -16,7 +16,6 @@ import gameserver.client.Player;
 import gameserver.commands.GameCommand;
 import gameserver.commands.StartGameCommand;
 import gameserver.data.GameMap;
-import gameserver.design.CommandExecutor;
 import gameserver.events.GameStartedEvent;
 import gameserver.server.GameEvent;
 

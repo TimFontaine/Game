@@ -1,18 +1,12 @@
 package gameserver.client;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-
 import javax.enterprise.context.ApplicationScoped;
 
 import gameserver.ServerMode;
 import gameserver.client.actions.NewLocalGameAction;
 import gameserver.client.panel.NewGamePanel;
 import gameserver.commands.StartGameCommand;
-import gameserver.design.CommandExecutor;
 import gameserver.design.PreGameClientCalls;
-import gameserver.design.ServerRootCalls;
 import gameserver.server.GameEvent;
 
 @ApplicationScoped

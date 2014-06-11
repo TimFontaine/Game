@@ -5,8 +5,6 @@ import javax.inject.Inject;
 
 import gameserver.Client;
 import gameserver.commands.GameCommand;
-import gameserver.design.CommandExecutor;
-import gameserver.design.ServerRootCalls;
 import gameserver.server.GameEvent;
 
 public class LocalCommandHandler implements ClientCommandHandler, Client {
@@ -15,7 +13,6 @@ public class LocalCommandHandler implements ClientCommandHandler, Client {
 	
 	@Inject private Event<GameCommand> event;
 	
-	CommandExecutor executor;
 	
 //	public LocalCommandHandler(GameClient client) {
 //		this.executor = client.getCommandExecutor();
@@ -23,11 +20,6 @@ public class LocalCommandHandler implements ClientCommandHandler, Client {
 //		System.out.println("command handler added client via calls");
 //	}
 	
-	public LocalCommandHandler(CommandExecutor executor) {
-		System.out.println("command handler added client via executor");
-		this.executor  = executor;
-	}
- 
 	public LocalCommandHandler() {
 	}
 
