@@ -62,7 +62,7 @@ public class Server implements Runnable {
 	@Override
 	public void run() {
 //		new Thread(network).start();
-		System.out.println("starting server at:" + System.currentTimeMillis());
+		System.out.println("starting test server at:" + System.currentTimeMillis());
 		network.waitForNewPlayer();
 		System.out.println("a player has connected at:" + System.currentTimeMillis());
 		System.out.println(Thread.currentThread().getName());
