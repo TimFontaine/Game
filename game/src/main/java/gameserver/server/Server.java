@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import gameserver.Client;
 import gameserver.ServerMode;
 import gameserver.cdi.CDIHelper;
+import gameserver.cdi.qualifiers.GameScope;
 import gameserver.client.Game;
 import gameserver.data.Connection;
 import gameserver.design.ServerConfig;
@@ -33,6 +34,7 @@ public class Server implements Runnable {
 	private Network network;
 	
 	public Server() {
+		System.out.println("starting server");
 		clients = new ArrayList<Connection>();
 		
 		//define all components for running the game

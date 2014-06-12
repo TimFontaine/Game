@@ -23,17 +23,17 @@ public class MapViewer {
 	private static final int tile_size = 50;
 	private ResourceManager resourceManager;
 
-	@Inject Instance<Game> game;
+	@Inject Game game;
 	
 	public MapViewer() {
 		this.resourceManager = ResourceManager.getInstance();
 	}
 	
 	public void draw(Graphics2D g) {
+			System.out.println("redrawing");
 			//the game is playing
-			Game testGame = game.get();
 			
-			if (game.get().getMap() != null) {
+			if (game.getMap() != null) {
 				drawMap(g);
 			}
 			//initial startup fase, paint swing
@@ -42,7 +42,7 @@ public class MapViewer {
 	}
 
 	private void drawMap(Graphics2D g) {
-		GameMap map = game.get().getMap();
+		GameMap map = game.getMap();
 		Rectangle bounds = g.getClipBounds();
 		
 		int tilesOnScreenX = (bounds.width / tile_size) + 1;

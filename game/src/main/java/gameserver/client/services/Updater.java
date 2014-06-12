@@ -8,14 +8,13 @@ import gameserver.cdi.qualifiers.ClientUpdate;
 import gameserver.client.graphics.GUI;
 import gameserver.events.GameStartedEvent;
 
-@ClientUpdate
 public class Updater {
 	
 	@Inject GUI gui;
 	
-	public void update(@Observes @Client GameStartedEvent event) {
+	public void update(@Observes @ClientUpdate GameStartedEvent event) {
 		//redraw
-		System.out.println("simple updater: starting game refreshing gui");
+		System.out.println("simple updater: starting game refreshing gui" + System.currentTimeMillis());
 		gui.startGame();;
 	}
 

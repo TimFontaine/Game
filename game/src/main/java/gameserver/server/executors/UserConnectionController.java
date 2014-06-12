@@ -10,6 +10,7 @@ import javax.enterprise.util.AnnotationLiteral;
 import javax.inject.Inject;
 import javax.inject.Qualifier;
 
+import gameserver.cdi.qualifiers.GameScope;
 import gameserver.cdi.qualifiers.Server;
 import gameserver.client.Game;
 import gameserver.client.Player;
@@ -20,7 +21,7 @@ import gameserver.events.GameStartedEvent;
 import gameserver.server.GameEvent;
 
 @ApplicationScoped
-public class UserConnectionController extends GameController {
+public class UserConnectionController {
 
 	@Inject private Game game;
 	

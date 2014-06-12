@@ -88,11 +88,11 @@ public class NetworkCommandHandler implements ClientCommandHandler, Connection {
 				GameEvent event = (GameEvent) ois.readObject();
 				System.out.println("message coming in at:" + System.currentTimeMillis());
 				System.out.println("client receives gameevent:" +event.toString());
-				if (!localConnection) {
+//				if (!localConnection) {
 					gameEvent.select(new AnnotationLiteral<NetworkUpdate>() {}).fire(event);
-				} else {
+//				} else {
 					gameEvent.select(new AnnotationLiteral<ClientUpdate>(){}).fire(event);
-				}
+//				}
 			} catch (ClassNotFoundException | IOException e) {
 				e.printStackTrace();
 			}

@@ -10,13 +10,12 @@ import gameserver.client.Game;
 import gameserver.events.GameStartedEvent;
 
 @ApplicationScoped
-public class GameUpdater extends Updater {
+public class GameUpdater {
 
 	@Inject Game game; 
 	
-	public void update(@Observes @Client GameStartedEvent event) {
+	public void update(@Observes @NetworkUpdate GameStartedEvent event) {
 		System.out.println("network update");
 		game.setMap(event.getGame().getMap());
-		super.update(event);
 	}
 }

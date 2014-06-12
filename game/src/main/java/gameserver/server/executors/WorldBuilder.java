@@ -8,7 +8,7 @@ public class WorldBuilder {
 
 	
 	public GameMap createWorld() {
-		GameMap gameMap = new GameMap(1000,1000);
+		GameMap gameMap = new GameMap(100,100);
 		for (int x = 0; x<gameMap.getSizeX();x++) {
 			for (int j=0; j<gameMap.getSizeY(); j++) {
 				Node node = new Node(TerrainType.SEA);

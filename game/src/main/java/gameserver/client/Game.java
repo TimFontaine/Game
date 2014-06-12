@@ -6,11 +6,12 @@ import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
+import gameserver.cdi.qualifiers.GameScope;
 import gameserver.data.GameMap;
 import gameserver.data.Map;
 
 //this contains all state data of the game
-@ApplicationScoped
+@GameScope
 public class Game implements Serializable {
 	
 	private GameMap map;
